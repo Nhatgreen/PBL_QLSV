@@ -6,8 +6,8 @@ bool authenticate(const string& username, const string& password) {
     ifstream userFile("users.txt");
     string accounts, user, pass;
 
-    while(userFile >> accounts) {
-        int len = accounts.length();
+    while(userFile >> accounts) { 
+        int len = accounts.length(); 
         for(int i = 0 ; i < len; i++) {
             if(accounts[i] == '|') {
                 user = accounts.substr(0, i);
@@ -42,7 +42,7 @@ void login(){
     if(i==3){
         cout<<"You have exceeded the number of attempts."<<endl;
     }
-    }
+    } 
 }
 int main() {
     login();
